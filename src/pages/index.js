@@ -13,8 +13,8 @@ export default function Home() {
     <div className="divide-y divide-gray-200">
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@tailwindcss" />
-        <meta name="twitter:creator" content="@tailwindcss" />
+        <meta name="twitter:site" content="@danmasonmp" />
+        <meta name="twitter:creator" content="@danmasonmp" />
         <meta name="twitter:title" content="Blog – Fidum" />
         <meta name="twitter:description" content="Discoveries by Dan Mason in the world of software development." />
         <meta name="twitter:image" content={`https://fidum.uk${twitterCard}`} />
