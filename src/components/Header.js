@@ -34,19 +34,19 @@ export default function Header() {
             <div className="text-base leading-5">
                 <a
                     href="https://twitter.com/danmasonmp"
-                    className="font-medium text-3xl text-gray-500 hover:text-cyan-300 mr-5"
+                    className="font-medium text-3xl text-gray-500 hover:text-cyan-300"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FontAwesomeIcon icon={faTwitter} />
+                    <FontAwesomeIcon className="mr-5" icon={faTwitter}/>
                 </a>
                 <a
                     href="https://github.com/fidum"
-                    className="font-medium text-3xl text-gray-500 hover:text-cyan-300 mr-5"
+                    className="font-medium text-3xl text-gray-500 hover:text-cyan-300"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon className="mr-5" icon={faGithub} />
                 </a>
                 <a
                     href="https://danielmason.co.uk"
