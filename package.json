@@ -1,10 +1,10 @@
 {
-  "name": "tailwind-blog",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && npm run build:rss",
+    "build": "next build && next export",
     "start": "next start",
     "build:rss": "node ./.next/server/scripts/build-rss.js"
   },
