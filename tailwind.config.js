@@ -9,7 +9,7 @@ module.exports = {
     mode: 'all',
     content: ['./src/**/*.{js,mdx}', './next.config.js'],
     options: {
-      whitelistPatterns: [/text-code$/],
+      whitelistPatterns: [/text-code.*/],
       extractors: [
         {
           extensions: ['mdx'],
