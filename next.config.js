@@ -56,9 +56,6 @@ module.exports = withBundleAnalyzer({
                 visit(tree, 'element', (node, index, parent) => {
                   let [token, type] = node.properties.className || []
                   if (token === 'token') {
-                    if(Object.keys(tokenClassNames).indexOf(type) === -1) {
-                      console.log(type);
-                    }
                     node.properties.className = [tokenClassNames[type]]
                   }
                 })
