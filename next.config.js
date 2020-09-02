@@ -1,6 +1,7 @@
 const { createLoader } = require('simple-functional-loader')
 const rehypePrism = require('@mapbox/rehype-prism')
 const visit = require('unist-util-visit')
+const emoji = require('remark-emoji')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -14,9 +15,13 @@ const tokenClassNames = {
   punctuation: 'text-code-white',
   keyword: 'text-code-purple',
   string: 'text-code-green',
+  'single-quoted-string': 'text-code-green',
   function: 'text-code-blue',
   boolean: 'text-code-red',
   comment: 'text-gray-400 italic',
+  scope: 'text-code-yellow',
+  variable: 'text-code-white',
+  operator: 'text-code-white',
 }
 
 module.exports = withBundleAnalyzer({
@@ -43,6 +48,7 @@ module.exports = withBundleAnalyzer({
       {
         loader: '@mdx-js/loader',
         options: {
+          remarkPlugins: [emoji],
           rehypePlugins: [
             rehypePrism,
             () => {
@@ -50,6 +56,9 @@ module.exports = withBundleAnalyzer({
                 visit(tree, 'element', (node, index, parent) => {
                   let [token, type] = node.properties.className || []
                   if (token === 'token') {
+                    if(Object.keys(tokenClassNames).indexOf(type) === -1) {
+                      console.log(type);
+                    }
                     node.properties.className = [tokenClassNames[type]]
                   }
                 })
