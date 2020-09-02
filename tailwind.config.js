@@ -11,7 +11,7 @@ module.exports = {
     options: {
       extractors: [
         {
-          extensions: ['mdx'],
+          extensions: ['mdx', 'js'],
           extractor: (content) => {
             content = mdx.sync(content)
 
