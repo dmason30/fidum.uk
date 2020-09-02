@@ -9,9 +9,10 @@ module.exports = {
     mode: 'all',
     content: ['./src/**/*.{js,mdx}', './next.config.js'],
     options: {
+      whitelistPatterns: [/text-code$/],
       extractors: [
         {
-          extensions: ['mdx', 'js'],
+          extensions: ['mdx'],
           extractor: (content) => {
             content = mdx.sync(content)
 
