@@ -26,6 +26,14 @@ export default function Home() {
         <title>Blog – Fidum</title>
         <meta name="description" content="Discoveries by Dan Mason in the world of software development." />
       </Head>
+      <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+        <h1 className="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Latest
+        </h1>
+        <p className="text-lg leading-7 text-gray-500">
+            Discoveries by Dan Mason in the world of software development.
+        </p>
+      </div>
       <ul className="divide-y divide-gray-200">
         {posts.map(({ link, module: { default: Component, meta } }) => {
           return (
