@@ -16,10 +16,10 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </Head>
-      <SectionContainer>
+      <SectionContainer classes="border-b-2 border-gray-200 md:border-0 md:border-white md:rounded-t-lg">
         <Header />
       </SectionContainer>
-      <SectionContainer>
+      <SectionContainer classes="md:rounded-b-lg">
         <main>
           <Component {...pageProps} />
         </main>
