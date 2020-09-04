@@ -15,6 +15,7 @@ const tokenClassNames = {
   punctuation: 'text-code-white',
   keyword: 'text-code-purple',
   string: 'text-code-green',
+  'double-quoted-string': 'text-code-green',
   'single-quoted-string': 'text-code-green',
   function: 'text-code-blue',
   boolean: 'text-code-red',
@@ -22,6 +23,12 @@ const tokenClassNames = {
   scope: 'text-code-yellow',
   variable: 'text-code-white',
   operator: 'text-code-white',
+  'this': 'text-code-white',
+  'class-name': 'text-code-white',
+  'number': 'text-code-white',
+  'interpolation': 'text-code-white',
+  'key': 'text-code-white',
+  'property': 'text-code-cyan',
 }
 
 module.exports = withBundleAnalyzer({

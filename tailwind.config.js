@@ -82,6 +82,7 @@ module.exports = {
           purple: '#d9a9ff',
           red: '#ff8383',
           blue: '#82AAFF',
+          cyan: '#89DDFF',
           white: '#fff',
         },
       },
