@@ -110,7 +110,7 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             a: {
-              color: theme('colors.cyan.500'),
+              color: theme('colors.blue.700'),
             },
             pre: {
               color: theme('colors.gray.200'),
