@@ -71,7 +71,7 @@ environments:
         # config here...
  ```
 
-We came to the realisation that we are going to have multiple `vapor.yml` files for each client and then
+We came to the realisation that we are going to have multiple `vapor.yml` files for each client and
 one foreach project. Then when we are deploying a specific client we need to get the right `vapor.yml` for that
 `client + envrionment` combination. Additionally, our solution for this would have to work well in our Travis CI to
 automate the deployments of all clients.
@@ -174,7 +174,7 @@ public function handle(): int
 
 This code deploys all clients that have a directory in the S3 bucket we set up in Step 2. If one client fails to
 deploy it will still continue and try to deploy the other clients, however, the command will return an error exit
-code to indicate that something went wrong. This has worked made deploying to all our clients a breeze and shows that
+code to indicate that something went wrong. This has made deploying to all our clients a breeze and shows that
 even if a service has its limits you can still find nice and clean ways to work around them.
 
 One thing I will probably change is the naming of the projects for `nonprod` as we used to have both a test and
@@ -206,13 +206,13 @@ deploy:
       all_branches: true
 ```
 
-Most people deploy test from a branch rather than a release tag, conversely, we group our changes as a release and when
-we tag a release for test we will number it like so `2.16.0-beta.1`. The final number is essentially our release
+Most people deploy test from a main or default branch, conversely, we group our changes as a release and when
+we tag a release for test we will number it like so `2.7.1-beta.4`. The final number is essentially our release
 candidate version, and we increase that number as we fix any bugs reported by the testers.
 
 As you can see in the travis config above we do a regex check on the `TRAVIS_TAG`. If it contains beta then it will
 only run the test deployment, however, when it is a production release we will just tag it with a normal version
-(e.g. `2.16.0`) and Travis will only run the production deploy as it matches the regex check.
+(e.g. `2.7.1`) and Travis will only run the production deploy as it matches the regex check.
 
 ## The End
 I know this was a lot of information so good effort if you have made it this far. This solution is not perfect,
