@@ -4,6 +4,7 @@ import tinytime from 'tinytime'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MDXProvider } from '@mdx-js/react'
+import * as Fathom from "fathom-client";
 
 const mdxComponents = {
   pre: ({ className, ...props }) => (
@@ -91,7 +92,11 @@ export default function Post({ meta, children, posts }) {
             <div className="pt-6 pb-16">
               <p>
                 Want to talk about this post?{' '}
-                <a href={meta.discussion} className="font-medium text-cyan-500 hover:text-cyan-300">
+                <a
+                    href={meta.discussion}
+                    onClick={() => Fathom.trackGoal('EPNQUIBX', 0)}
+                    className="font-medium text-cyan-500 hover:text-cyan-300"
+                >
                   Discuss this on Twitter &rarr;
                 </a>
               </p>

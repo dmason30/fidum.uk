@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import * as Fathom from 'fathom-client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
@@ -34,6 +35,7 @@ export default function Header() {
             <div className="text-base leading-5">
                 <a
                     href="https://twitter.com/danmasonmp"
+                    onClick={() => Fathom.trackGoal('4NHRT2HL', 0)}
                     className="font-medium text-3xl text-gray-500 hover:text-cyan-300"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -42,6 +44,7 @@ export default function Header() {
                 </a>
                 <a
                     href="https://github.com/fidum"
+                    onClick={() => Fathom.trackGoal('XDTE8P1Q', 0)}
                     className="font-medium text-3xl text-gray-500 hover:text-cyan-300"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -50,6 +53,7 @@ export default function Header() {
                 </a>
                 <a
                     href="https://danielmason.co.uk"
+                    onClick={() => Fathom.trackGoal('ACUZHGFQ', 0)}
                     className="font-medium text-3xl text-gray-500 hover:text-cyan-300"
                     target="_blank"
                     rel="noopener noreferrer"
