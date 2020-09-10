@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
     useEffect(() => {
         // Initialize Fathom when the app loads
         Fathom.load('ICJIJBJL', {
+            url: 'https://canidae.fidum.uk/script.js',
             includedDomains: ['fidum.uk']
         })
 
