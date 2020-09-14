@@ -66,12 +66,12 @@ export default function Header() {
                 <a
                     href="https://fidum.uk/feed.xml"
                     onClick={() => Fathom.trackGoal('U49CIRHG', 0)}
-                    className="font-medium text-3xl text-gray-500 hover:text-orange-500 mr-5"
+                    className="font-medium text-3xl text-gray-500 hover:text-orange-500"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="RSS Feed"
                 >
-                    <FontAwesomeIcon icon={faRssSquare}/>
+                    <FontAwesomeIcon className="mr-5" icon={faRssSquare}/>
                 </a>
                 <a
                     href="https://twitter.com/danmasonmp"
