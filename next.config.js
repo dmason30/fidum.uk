@@ -27,8 +27,9 @@ const tokenClassNames = {
   'class-name': 'text-code-white',
   'number': 'text-code-white',
   'interpolation': 'text-code-white',
-  'key': 'text-code-white',
+  'key': 'text-code-red',
   'property': 'text-code-cyan',
+  'scalar': 'text-code-cyan',
 }
 
 module.exports = withBundleAnalyzer({
@@ -63,6 +64,9 @@ module.exports = withBundleAnalyzer({
                 visit(tree, 'element', (node, index, parent) => {
                   let [token, type] = node.properties.className || []
                   if (token === 'token') {
+                    if (Object.keys(tokenClassNames).indexOf(type) === -1) {
+                        console.log(type);
+                    }
                     node.properties.className = [tokenClassNames[type]]
                   }
                 })

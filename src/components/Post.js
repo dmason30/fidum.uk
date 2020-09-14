@@ -84,7 +84,7 @@ export default function Post({ meta, children, posts }) {
             </ul>
           </dd>
         </dl>
-        <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
+        <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2 ">
           <div className="prose max-w-none pt-10 pb-8">
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
           </div>
@@ -103,13 +103,13 @@ export default function Post({ meta, children, posts }) {
             </div>
           )}
         </div>
-        <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 xl:col-start-1 xl:row-start-2">
+        <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 xl:col-start-1 xl:row-start-2 xl:pr-4">
           {(next || previous) && (
             <div className="space-y-8 py-8">
               {next && (
                 <div>
                   <h2 className="text-xs tracking-wide uppercase text-gray-500">Next Article</h2>
-                  <div className="text-cyan-500 hover:text-cyan-300">
+                  <div className="text-cyan-500 hover:text-cyan-300 xl:w-2/3">
                     <Link href={next.link}>
                       <a>{next.title}</a>
                     </Link>
@@ -121,7 +121,7 @@ export default function Post({ meta, children, posts }) {
                   <h2 className="text-xs tracking-wide uppercase text-gray-500">
                     Previous Article
                   </h2>
-                  <div className="text-cyan-500 hover:text-cyan-300">
+                  <div className="text-cyan-500 hover:text-cyan-300 xl:w-2/3">
                     <Link href={previous.link}>
                       <a>{previous.title}</a>
                     </Link>
