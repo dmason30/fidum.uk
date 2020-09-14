@@ -2,12 +2,11 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && pwd && ls -la && npm run build:rss",
+    "build": "next build && next export && ls -la .next && npm run build:rss",
     "start": "next start",
-    "build:rss": "node ./scripts/build-rss.js"
+    "build:rss": "node ./.next/server/scripts/build-rss.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
