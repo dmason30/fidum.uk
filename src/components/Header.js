@@ -46,23 +46,13 @@ export default function Header() {
         <header className="flex justify-between items-center py-5 md:py-10">
             <div>
                 <Link href="/">
-                    <a aria-label="Tailwind CSS Blog">
+                    <a aria-label="Fidum Blog">
                         <FidumMark className="h-6 sm:hidden"/>
                         <FidumLogo className="hidden sm:block h-6"/>
                     </a>
                 </Link>
             </div>
             <div className="text-base leading-5">
-                <a
-                    href="https://app.usefathom.com/share/icjijbjl/fidum.uk"
-                    onClick={() => Fathom.trackGoal('IFBL03FR', 0)}
-                    className="font-medium text-3xl text-gray-500 hover:text-cyan-300 inline-flex"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Site Analytics"
-                >
-                    <FathomLogo className="mr-5" />
-                </a>
                 <a
                     href="https://fidum.uk/feed.xml"
                     onClick={() => Fathom.trackGoal('U49CIRHG', 0)}
