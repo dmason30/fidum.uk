@@ -50,7 +50,7 @@ has a test and staging environment:
     src={vaporDashboardNonprod}
     alt="Vapor dashboard showing our nonprod projects setup"
     title="Vapor dashboard showing our nonprod projects setup"
-    style={{maxWidth: 500}}
+    class="w-full max-w-[500px]"
 />
 
 Then for `production` we decided to create each client as a team, and each team would have a `prod` project.
@@ -60,7 +60,7 @@ with its private database, Redis cache, and NAT gateway.
     src={vaporDashboardProd}
     alt="Vapor dashboard showing our production team and project setup"
     title="Vapor dashboard showing our production team and project setup"
-    style={{maxWidth: 500}}
+    class="w-full max-w-[500px]"
 />
 
 Due to this setup, we now have different teams for each client, and our test/staging/prod environments have
@@ -452,7 +452,7 @@ fields for a form as shown below:
     src={vaporDeployProd}
     alt="Manually deploying a production environment in a GitHub Actions"
     title="Manually deploying a production environment in a GitHub Actions"
-    style={{maxWidth: 300}}
+    class="w-full max-w-[500px]"
 />
 
 This is then passed to the GitHub Actions workflow as inputs and we pass the `Client Reference` and the `Release tag`
