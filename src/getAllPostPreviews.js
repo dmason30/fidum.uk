@@ -1,5 +1,3 @@
-import getFidumPackages from '@/getFidumPackages';
-
 function importAll(r) {
   return r
     .keys()
@@ -16,7 +14,7 @@ function dateSortDesc(a, b) {
 }
 
 export default function getAllPostPreviews() {
-  return importAll(require.context('./pages/?preview', true, /\.mdx$/))
-      .concat(getFidumPackages())
-      .sort((a, b) => dateSortDesc(a.module.meta.date, b.module.meta.date));
+  return importAll(require.context('./pages/?preview', true, /\.mdx$/)).sort((a, b) =>
+    dateSortDesc(a.module.meta.date, b.module.meta.date)
+  )
 }
