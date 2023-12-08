@@ -35,36 +35,55 @@ export default function Home() {
         </p>
       </div>
       <ul className="divide-y divide-gray-200">
-        {posts.map(({ link, module: { default: Component, meta } }) => {
+        {posts.map(({ link, module: { default: Component, meta } }, i) => {
           return (
-            <li key={link} className="py-12">
+            <li key={i} className="py-12">
               <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                 <dl>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base leading-6 font-medium text-cyan-500">
                     <time dateTime={meta.date}>{postDateTemplate.render(new Date(meta.date))}</time>
+                    <div className="text-black">
+                        {meta.package ? (
+                            <div className="px-2 rounded-lg bg-blue-100 text-xs w-max-content">
+                                package
+                            </div>
+                        ) : (
+                            <div className="px-2 rounded-lg bg-green-100 text-xs w-max-content">
+                                post
+                            </div>
+                        )}
+                    </div>
                   </dd>
                 </dl>
                 <div className="space-y-5 xl:col-span-3">
                   <div className="space-y-6">
                     <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                      <Link href={link}>
-                        <a className="text-gray-900">{meta.title}</a>
-                      </Link>
+                        {meta.package ? (
+                            <a href={link} className="hover:underline">
+                                {meta.description}
+                            </a>
+                        ) : (
+                            <Link href={link}>
+                                <a className="text-gray-900 hover:underline">{meta.title}</a>
+                            </Link>
+                        )}
                     </h2>
                     <div className="prose max-w-none text-gray-500">
                       <Component />
                     </div>
                   </div>
                   <div className="text-base leading-6 font-medium">
-                    <Link href={link}>
-                      <a
-                        className="text-cyan-500"
-                        aria-label={`Read "${meta.title}"`}
-                      >
-                        Read more &rarr;
-                      </a>
-                    </Link>
+                      {meta.package ? null : (
+                          <Link href={link}>
+                              <a
+                                  className="text-cyan-500"
+                                  aria-label={`Read "${meta.title}"`}
+                              >
+                                  Read more &rarr;
+                              </a>
+                          </Link>
+                      )}
                   </div>
                 </div>
               </article>

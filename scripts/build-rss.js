@@ -12,7 +12,7 @@ getAllPostPreviews().forEach(({ link, module: { meta } }) => {
   feed.item({
     title: meta.title,
     guid: link,
-    url: `https://fidum.uk${link}`,
+    url: meta.package ? link : `https://fidum.uk${link}`,
     date: meta.date,
     description: meta.description,
     custom_elements: [].concat(meta.authors.map((author) => ({ author: [{ name: author.name }] }))),
