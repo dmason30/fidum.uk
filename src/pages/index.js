@@ -3,12 +3,17 @@ import Link from 'next/link'
 import Head from 'next/head'
 import getAllPostPreviews from '@/getAllPostPreviews'
 import twitterCard from '@/img/twitter-card.png'
-
-const posts = getAllPostPreviews()
+import { useEffect, useState } from 'react';
 
 const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
 export default function Home() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(async () => {
+        setPosts(await getAllPostPreviews());
+    }, []);
+
   return (
     <div className="divide-y divide-gray-200">
       <Head>
