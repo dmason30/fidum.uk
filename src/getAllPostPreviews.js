@@ -15,8 +15,8 @@ function dateSortDesc(a, b) {
   return 0
 }
 
-export default async function getAllPostPreviews() {
+export default function getAllPostPreviews() {
   return importAll(require.context('./pages/?preview', true, /\.mdx$/))
-      .concat(await getFidumPackages())
+      .concat(getFidumPackages())
       .sort((a, b) => dateSortDesc(a.module.meta.date, b.module.meta.date));
 }
