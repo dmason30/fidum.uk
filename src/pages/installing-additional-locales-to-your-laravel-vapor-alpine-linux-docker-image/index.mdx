@@ -42,7 +42,7 @@ To use this solution you must be using in `runtime: docker` or `runtime: docker-
 See the Vapor docs [Docker Runtimes](https://docs.vapor.build/projects/environments.html#docker-runtimes) section for more information.
 
 ## Installing the locales
-In your `Dockerfile` you should add the following line between the `RUN` and `COPY` lines
+In your `Dockerfile` you should add the following line between the `FROM` and `COPY` lines
 
 ```dockerfile
 RUN apk add --no-cache icu-data-full
