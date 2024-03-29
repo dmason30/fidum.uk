@@ -9,6 +9,31 @@
       "source": "/managing-laravel-vapor-for-white-label-projects",
       "destination": "https://danielmason.co.uk/posts/managing-laravel-vapor-for-white-label-projects",
       "permanent": true
+    },
+    {
+      "source": "/automating-schema-dump-with-github-actions",
+      "destination": "https://danielmason.co.uk/posts/automating-schema-dump-with-github-actions",
+      "permanent": true
+    },
+    {
+      "source": "/deploying-the-same-code-to-multiple-vapor-projects",
+      "destination": "https://danielmason.co.uk/posts/deploying-the-same-code-to-multiple-vapor-projects",
+      "permanent": true
+    },
+    {
+      "source": "/making-the-most-of-your-laravel-dumps",
+      "destination": "https://danielmason.co.uk/posts/making-the-most-of-your-laravel-dumps",
+      "permanent": true
+    },
+    {
+      "source": "/starting-a-blog",
+      "destination": "https://danielmason.co.uk/posts/starting-a-blog",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://danielmason.co.uk/",
+      "permanent": true
     }
   ]
 }
