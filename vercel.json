@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/installing-additional-locales-to-your-laravel-vapor-alpine-linux-docker-image",
+      "destination": "https://danielmason.co.uk/posts/installing-additional-locales-to-your-laravel-vapor-alpine-linux-docker-image",
+      "permanent": true
+    },
+    {
+      "source": "/managing-laravel-vapor-for-white-label-projects",
+      "destination": "https://danielmason.co.uk/posts/managing-laravel-vapor-for-white-label-projects",
+      "permanent": true
+    }
+  ]
+}
